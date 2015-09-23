@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Intranet</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="X-UA-Compatible" content="IE=9" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width">
+
+        <?php
+            $this->headLink()->appendStylesheet($this->baseUrl('plugin/bootstrap/css/bootstrap.min.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('plugin/bootstrap/css/bootstrap-theme.min.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('plugin/font-awesome-4.3.0/css/font-awesome.min.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('plugin/capty/css/jquery.capty.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('plugin/owl-carousel/owl-carousel/owl.carousel.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('css/grid.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('css/bootstrap-replaces.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('css/modelo.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('css/fonts.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('plugin/summernote/summernote.css'));
+            echo $this->headLink();
+            ?>
+
+    </head>
+    <body>
+
+       
+                <?php
+                echo $this->layout()->content
+                ?>
+
+        <?php
+        // include js files
+        $this->headScript()->prependFile($this->baseUrl('plugin/jquery/jquery-2.1.1.js'));                          # jquery
+        $this->headScript()->appendFile($this->baseUrl('plugin/bootstrap/js/bootstrap.js'));                        # bootstrap
+        $this->headScript()->appendFile($this->baseUrl('plugin/datepicker/js/bootstrap-datepicker.js'));            # datepicker
+        $this->headScript()->appendFile($this->baseUrl('plugin/jquery/actions.js'));                        
+
+        $this->headScript()->appendFile($this->baseUrl('plugin/validate/validator.min.js'));                    #validador de form em js
+        $this->headScript()->appendFile($this->baseUrl('plugin/validate/jqBootstrapValidation.js'));            #validador de form em js
+        $this->headScript()->appendFile($this->baseUrl('plugin/mask/jquery.maskedinput.js'));                   #mascara para form em js
+        $this->headScript()->appendFile($this->baseUrl('plugin/mask/mask.js'));                                 #mascara para form em js
+        $this->headScript()->appendFile($this->baseUrl('plugin/owl-carousel/owl-carousel/owl.carousel.min.js'));    #carousel owl | aniversariantes
+        $this->headScript()->appendFile($this->baseUrl('plugin/summernote/summernote.min.js'));    #wysiwyg
+        $this->headScript()->appendFile($this->baseUrl('plugin/data-tables/jquery.dataTables.min.js'));    
+        $this->headScript()->appendFile($this->baseUrl('plugin/data-tables/dataTables.colResize.js'));    
+
+        echo $this->headScript();
+        ?>
+
+    </body>
+</html>
