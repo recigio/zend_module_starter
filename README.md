@@ -1,2 +1,3 @@
-# zend_module_starter
 Zend Starter Project with Modules.
+
+Example project with modules.
